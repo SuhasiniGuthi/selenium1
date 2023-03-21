@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<test thread-count="5" name="Test1">
+  <parameter name="suite-param" value="suite-param1 value"></parameter>
+  <classes>
+  	<class name="testNg.ParameterAnnotationExample">
+  		<methods>
+  			<include name="method1"></include>
+  		</methods>
+  	  	</class>
+      </classes>
+    </test> <!-- Test -->
+    
+    <test thread-count="5" name="Test2">
+    <parameter name="suite-param" value="suite-param2 value"></parameter>
+  <classes>
+  	<class name="testNg.ParameterAnnotationExample">
+  		<methods>
+  			<include name="method2"></include>
+  		</methods>
+  	  	</class>
+      </classes>
+    </test> <!-- Test -->
+    
+    <test thread-count="5" name="Test3">
+    <parameter name="suite-param" value="override suite-param1 value"></parameter>
+    <parameter name="suite-param2" value="override suite-param2 value"></parameter>
+  <classes>
+  	<class name="testNg.ParameterAnnotationExample">
+  		<methods>
+  			<include name="method3"></include>
+  		</methods>
+  	  	</class>
+      </classes>
+    </test> <!-- Test -->
+
+
+</suite> <!-- Suite -->
